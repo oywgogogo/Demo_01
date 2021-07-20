@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ccut.dao.LoginMapper">
+    <select id="findUserByUserName" parameterType="com.ccut.pojo.vo.LoginVO" resultType="com.ccut.pojo.vo.LoginVO">
+        select userpass from users where username = #{username}
+    </select>
+
+
+</mapper>

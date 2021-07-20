@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ccut.dao.CovDataMapper">
+
+    <insert id="addData" parameterType="CovData">
+        insert into students(name,sex,height) values (#{name},#{sex},#{height})
+    </insert>
+
+    <select id="queryData" parameterType="map" resultType="com.ccut.pojo.DataTest">
+        select * from covdata limit #{currPage},#{currPageSize}
+    </select>
+
+    <select id="allstudents" resultType="CovData">
+        select * from students
+    </select>
+
+</mapper>

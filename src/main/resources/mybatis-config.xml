@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--配置数据源，现在交给Spring去做-->
+
+    <!--1.日志输出-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <!--    2.起别名：批量定义(别名为实体类下的类名，第一个字母大小写都可以)-->
+    <typeAliases>
+        <package name="com.ccut.pojo"/>
+    </typeAliases>
+
+<!--    3.绑定Mapper.xml-->
+<!--    <mappers>-->
+<!--        <mapper class="com.ccut.dao.CovData"/>-->
+<!--    </mappers>-->
+
+</configuration>
