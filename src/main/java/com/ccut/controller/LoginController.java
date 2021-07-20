@@ -26,4 +26,14 @@ public class LoginController {
         }
     }
 
+    @GetMapping("/logOut")
+    public boolean  loginOut(LoginVO loginVO){
+        boolean flag = loginService.login(loginVO.getUsername(),loginVO.getUserpass());
+        if (flag){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
 }
